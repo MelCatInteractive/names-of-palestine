@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaza Memorial - Remembering Lives Lost</title>
+  <meta name="description" content="A memorial remembering Palestinian lives lost in Gaza. We remember their names in solidarity with those still suffering.">
+  <meta property="og:title" content="Gaza Memorial - Remembering Lives Lost">
+  <meta property="og:description" content="A memorial remembering Palestinian lives lost in Gaza. We remember their names in solidarity with those still suffering.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gaza Memorial - Remembering Lives Lost">
+  <meta name="twitter:description" content="A memorial remembering Palestinian lives lost in Gaza. We remember their names in solidarity with those still suffering.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro-overlay">
+    <div id="intro-text"></div>
+    <div id="loading-indicator" style="display: none; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 0.9em; color: #666;">Loading...</div>
+  </div>
+
+  <div id="ghost-wall"></div>
+
+  <div id="name-container" class="hidden">
+    <div id="name-line"></div>
+    <div id="dob-line"></div>
+  </div>
+
+  <button id="play-prompt">▶︎</button>
+
+  <div id="video-container">
+    <div id="video-player">
+      <video id="video-element" preload="metadata"></video>
+      <button id="mute-btn">🔊</button>
+      <div id="video-error" style="display: none; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #111; color: #fff; text-align: center; font-size: 0.9em;">Video unavailable<br><small>Continuing memorial...</small></div>
+    </div>
+    <div id="video-caption">
+      <div id="video-source"></div>
+      <div id="video-date"></div>
+    </div>
+    <div id="video-context"></div>
+    <div id="video-buttons">
+      <button class="video-btn" id="btn-complicit">Remain Complicit</button>
+      <button class="video-btn" id="btn-help">Help</button>
+    </div>
+  </div>
+
+  <audio id="tick-audio" src="tick.mp3" preload="auto"></audio>
+
+  <script src="main.js"></script>
+</body>
+</html>

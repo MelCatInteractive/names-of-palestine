@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Gaza Memorial</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 60ch;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        h1 {
+            font-size: 2.4em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1em;
+            color: #fff;
+        }
+        
+        .intro {
+            font-size: 1.15em;
+            text-align: center;
+            margin-bottom: 3em;
+            font-weight: 300;
+            color: #ddd;
+        }
+        
+        .section {
+            margin: 3em 0;
+        }
+        
+        .section-urgent {
+            border: 1px solid #333;
+            border-left: 4px solid red;
+            padding: 1.5em;
+            background: #0a0a0a;
+            margin: 3em 0;
+        }
+        
+        .section-standard {
+            border-left: 4px solid #666;
+            padding-left: 1.5em;
+            margin: 3em 0;
+        }
+        
+        h2 {
+            font-size: 1.4em;
+            font-weight: 500;
+            margin: 0 0 1.5em 0;
+            color: #fff;
+        }
+        
+        .section-urgent h2 {
+            color: red;
+            font-weight: 600;
+        }
+        
+        .resource-grid {
+            display: grid;
+            gap: 1em;
+            margin: 1.5em 0;
+        }
+        
+        .resource-item {
+            display: block;
+            padding: 1.2em;
+            background: #111;
+            border-left: 3px solid #333;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        
+        .resource-item:hover {
+            border-left-color: #fff;
+            background: #151515;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .resource-urgent {
+            background: #1a0808;
+            border-left-color: #660000;
+        }
+        
+        .resource-urgent:hover {
+            border-left-color: red;
+            background: #220a0a;
+        }
+        
+        .resource-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 0.4em;
+            display: block;
+            color: #fff;
+        }
+        
+        .resource-desc {
+            color: #bbb;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .resource-type {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #666;
+            margin-bottom: 0.3em;
+            font-weight: 500;
+        }
+        
+        .simple-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5em 0;
+        }
+        
+        .simple-list li {
+            margin-bottom: 0.8em;
+            padding-left: 1em;
+            position: relative;
+            color: #ddd;
+        }
+        
+        .simple-list li:before {
+            content: "•";
+            color: #666;
+            position: absolute;
+            left: 0;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #ccc;
+        }
+        
+        .urgent-text {
+            color: red;
+            font-weight: 600;
+        }
+        
+        .back-link {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.6em 1.2em;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: #fff;
+            color: #000;
+        }
+        
+        .quote {
+            text-align: center;
+            margin-top: 4em;
+            padding-top: 2em;
+            border-top: 1px solid #333;
+            font-size: 0.9em;
+            color: #888;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .back-link {
+                position: static;
+                display: block;
+                text-align: center;
+                margin-bottom: 2rem;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.2em;
+            }
+            
+            .section-urgent {
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Memorial</a>
+    
+    <div class="container">
+        <h1>Take Action</h1>
+        
+        <div class="intro">
+            The memorial you experienced represents real lives lost.<br>
+            Here are ways to help and create meaningful change.
+        </div>
+        
+        <div class="section-urgent">
+            <h2>Urgent Humanitarian Need</h2>
+            <div class="resource-grid">
+                <a href="https://www.unrwa.org/donate" target="_blank" class="resource-item resource-urgent">
+                    <div class="resource-type">UN Agency</div>
+                    <div class="resource-title">UNRWA</div>
+                    <div class="resource-desc">Emergency aid, healthcare, and education for Palestinian refugees across the region.</div>
+                </a>
+                <a href="https://www.pcrf.net/donate" target="_blank" class="resource-item resource-urgent">
+                    <div class="resource-type">Medical Care</div>
+                    <div class="resource-title">Palestine Children's Relief Fund</div>
+                    <div class="resource-desc">Critical medical care for children and humanitarian relief in Gaza and the West Bank.</div>
+                </a>
+                <a href="https://www.map.org.uk/donate" target="_blank" class="resource-item resource-urgent">
+                    <div class="resource-type">Healthcare</div>
+                    <div class="resource-title">Medical Aid for Palestinians</div>
+                    <div class="resource-desc">Medical supplies and healthcare support for Palestinian communities.</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="section-standard">
+            <h2>Learn & Stay Informed</h2>
+            <div class="resource-grid">
+                <a href="https://www.btselem.org/" target="_blank" class="resource-item">
+                    <div class="resource-type">Human Rights</div>
+                    <div class="resource-title">B'Tselem</div>
+                    <div class="resource-desc">Israeli human rights organization documenting violations and providing factual reporting.</div>
+                </a>
+                <a href="https://www.hrw.org/middle-east/north-africa/israel/palestine" target="_blank" class="resource-item">
+                    <div class="resource-type">International Monitoring</div>
+                    <div class="resource-title">Human Rights Watch</div>
+                    <div class="resource-desc">Independent global investigation and reporting on human rights conditions.</div>
+                </a>
+                <a href="https://www.aljazeera.com/where/palestine/" target="_blank" class="resource-item">
+                    <div class="resource-type">News Coverage</div>
+                    <div class="resource-title">Al Jazeera Palestine</div>
+                    <div class="resource-desc">Comprehensive news coverage and on-ground reporting from the region.</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="section-standard">
+            <h2>Political & Advocacy Action</h2>
+            <div class="resource-grid">
+                <a href="https://bdsmovement.net/" target="_blank" class="resource-item">
+                    <div class="resource-type">Global Advocacy</div>
+                    <div class="resource-title">BDS Movement</div>
+                    <div class="resource-desc">International movement for boycotts, divestment, and sanctions until Palestinian rights are recognized.</div>
+                </a>
+                <a href="https://www.jewishvoiceforpeace.org/" target="_blank" class="resource-item">
+                    <div class="resource-type">International Coalition</div>
+                    <div class="resource-title">Jewish Voice for Peace</div>
+                    <div class="resource-desc">International Jewish-led organization advocating for Palestinian rights and ending occupation.</div>
+                </a>
+                <div class="resource-item" onclick="window.open('https://www.google.com/search?q=contact+government+representatives+' + window.location.hostname.split('.').slice(-2).join('.'), '_blank')">
+                    <div class="resource-type">Local Action</div>
+                    <div class="resource-title">Contact Your Government</div>
+                    <div class="resource-desc">Reach out to your local representatives, MPs, or officials about foreign policy and international law compliance.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-standard">
+            <h2>Amplify Palestinian Voices</h2>
+            <ul class="simple-list">
+                <li>Follow and support Palestinian journalists, photographers, and content creators</li>
+                <li>Share verified information and firsthand accounts from Palestinian sources</li>
+                <li>Support Palestinian artists, writers, musicians, and cultural creators</li>
+                <li>Listen to Palestinian-led organizations and follow their guidance on solidarity</li>
+                <li>Attend cultural events, film screenings, and educational programs in your area</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 3em; text-align: center;">
+            <span class="urgent-text">Every action matters.</span><br>
+            Whether through aid, education, advocacy, or bearing witness - you can contribute to justice.
+        </p>
+        
+        <div class="quote">
+            "In the end, we will remember not the words of our enemies, but the silence of our friends." - Martin Luther King Jr.
+        </div>
+    </div>
+</body>
+</html>
